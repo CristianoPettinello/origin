@@ -1,0 +1,41 @@
+### Qt project files
+solution/qt/jsoncpp/jsoncpp.pro.user
+solution/qt/Htt/Nidek.Libraries.Htt.pro.user
+solution/qt/UsbDriver/Nidek.Libraries.UsbDriver.pro.user
+solution/qt/Utils/Nidek.Libraries.Utils.pro.user
+applications/Htt/Nidek.Solution.Htt.pro.user
+applications/TestHttDriver/TestHttDriver.pro.user
+
+solution/qt/build-jsoncpp-Desktop_Qt_5_9_3_MinGW_32bit
+solution/qt/build-jsoncpp-Desktop_Qt_5_9_3_MSVC2015_64bit
+solution/qt/build-Nidek.Libraries.Htt-Desktop_Qt_5_9_3_MinGW_32bit
+solution/qt/build-Nidek.Libraries.Htt-Desktop_Qt_5_9_3_MSVC2015_64bit
+solution/qt/build-Nidek.Libraries.UsbDriver-Desktop_Qt_5_9_3_MinGW_32bit
+solution/qt/build-Nidek.Libraries.UsbDriver-Desktop_Qt_5_9_3_MSVC2015_64bit
+solution/qt/build-Nidek.Libraries.Utils-Desktop_Qt_5_9_3_MinGW_32bit
+solution/qt/build-Nidek.Libraries.Utils-Desktop_Qt_5_9_3_MSVC2015_64bit
+applications/build-Nidek.Solution.Htt-Desktop_Qt_5_9_3_MinGW_32bit
+applications/build-Nidek.Solution.Htt-Desktop_Qt_5_9_3_MSVC2015_64bit
+applications/build-TestHttDriver-Desktop_Qt_5_9_3_MinGW_32bit
+applications/build-TestHttDriver-Desktop_Qt_5_9_3_MSVC2015_64bit
+
+### Library build folders
+ext-dep/jsoncpp/build
+solution/makefile/build
+solution/makefile/results
+solution/makefile/*.log
+libraries/Utils/build
+
+# Compiled Object files
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Firmware imges
+*.img

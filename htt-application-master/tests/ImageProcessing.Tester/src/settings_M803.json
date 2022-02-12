@@ -1,0 +1,359 @@
+{
+    // (bool): Enable/Disable the debug flag for printing additional information or storing images with
+    // partial results obtained during the computation
+    "debug": true,
+    "image": {
+        // (int): width
+        "width": 560,
+        // (int): height
+        "height": 560,
+        // (int): channels
+        "nChannels": 1, // 3
+        // (bool): Enable flip image left/right
+        "horizontalFlip": false
+    },
+    "channel_section": {
+        // (int): Color channel to process, R=0, G=1, B=2. This will be valid till a color camera is used
+        "selectedChannel": 1
+    },
+    "model": "MINI_BEVEL_EXT", // (enum): ["MINI_BEVEL", "T_BEVEL", "CUSTOM_BEVEL", "MINI_BEVEL_EXT"]
+    "thresholding": {
+        // (float): threshold used for extracting the profile on the sobel-filtered image
+        "threshold": 1,
+        // (int):
+        "maxIterations": 254,
+        // (int): this is used to set the column at which the backward raw scan is stopped during thresholding
+        "leftBoundary": 100,
+        // (int): margin from the right side of the image
+        "rightBoundary": 100,
+        // (int): margin from the upper side of the image
+        "upperBoundary": 0, //50,
+        // (int): margin from the upper side of the image
+        "lowerBoundary": 20, //100
+        // (int): search window from the position found by thresholding. The search is then done on the local
+        // maximum of the low-pass-filtered image
+        "searchWidth": 20,
+        // (int): offset of the search window
+        "searchOffset": 10,
+        // (int): profile offset to the right of the max. value
+        "profileOffset": 0,
+        // (bool):
+        "enableStylusMask": true,
+        // (int) :
+        "stylusMaskX1": 330,
+        // (int) :
+        "stylusMaskY1": 200,
+        // (int) :
+        "stylusMaskX2": 559,
+        // (int) :
+        "stylusMaskY2": 340,
+        // (int):
+        "referenceOffsetFromStylus": 80,
+        // (int) :
+        "referenceHalfHeight": 20,
+        // (int) :
+        "referenceWidth": 10
+    },
+    "profile_cleanup": {
+        // (float):
+        "distanceThreshold": 5.0,
+        // (int):
+        "windowSize": 3,
+        // (int):
+        "counterThreshold": 5,
+        // (int): profile moving average filter half-window size
+        "filteringHalfWindowSize": 5
+    },
+    "pso": [
+        // MiniBevelModel
+        {
+            // (bool): PSO debug variable
+            "debug": false,
+            // (int): Maximum number of iterations
+            "nIterations": 200, //10, FIXME
+            // (int): Number of particles
+            "nParticles": 1000, //950, FIXME
+            // (float): Initial velocity
+            "w0i": 0.7, //0.5, FIXME
+            // (float): Final velocity
+            "w0f": 0.7, //0.05, FIXME
+            // (float): cognitive weight
+            "cp": 0.7, //0.5, FIXME
+            // (float): social weight
+            "cg": 0.1, // 0.5 FIXME
+            // (float): bevel angle
+            "angle": 55.0
+        },
+        // TBevelModel
+        {
+            // (bool): PSO debug variable
+            "debug": false,
+            // (int): Maximum number of iterations
+            "nIterations": 20,
+            // (int): Number of particles
+            "nParticles": 1500,
+            // (float): Initial velocity
+            "w0i": 0.5,
+            // (float): Final velocity
+            "w0f": 0.05,
+            // (float): cognitive weight
+            "cp": 0.5,
+            // (float): social weight
+            "cg": 0.5
+        },
+        // CustomBevelModel
+        {
+            // (bool): PSO debug variable
+            "debug": false,
+            // (int): Maximum number of iterations
+            "nIterations": 20,
+            // (int): Number of particles
+            "nParticles": 1500,
+            // (float): Initial velocity
+            "w0i": 0.5,
+            // (float): Final velocity
+            "w0f": 0.05,
+            // (float): cognitive weight
+            "cp": 0.5,
+            // (float): social weight
+            "cg": 0.5
+        },
+        // MiniBevelModelExt
+        {
+            // (bool): PSO debug variable
+            "debug": false,
+            // (int): Maximum number of iterations
+            "nIterations": 200, //10, FIXME
+            // (int): Number of particles
+            "nParticles": 1000, //950, FIXME
+            // (float): Initial velocity
+            "w0i": 0.7, //0.5, FIXME
+            // (float): Final velocity
+            "w0f": 0.7, //0.05, FIXME
+            // (float): cognitive weight
+            "cp": 0.7, //0.5, FIXME
+            // (float): social weight
+            "cg": 0.1, // 0.5 FIXME
+            // (float): bevel angle
+            "angle": 55.0
+        }
+    ],
+    "optimization": {
+        // (bool): Debug variable for optimization
+        "debug": false,
+        // (int): Loss field margin (in pixels) from the trace.
+        "lossFieldMargin": 0,
+        "lossFieldMarginCalibration": -2,
+        "lossFieldMarginValidation": -2,
+        // (int):
+        "lossFieldRightOffset": 30, //7, //50,
+        // (int):
+        "lossFieldLeftOffset": 30, //10,
+        // (int): Maximum number of PSO retries
+        "maxRetries": 2,
+        // (bool):
+        "checkIntersections": false,
+        // (bool):
+        "checkIntersectionsCalibration": false,
+        // (bool):
+        "checkIntersectionsValidation": false,
+        // (int):
+        "intersectionThreshold": 10,
+        // (int):
+        "leftGradientWidth": 20,
+        // (bool): Enable/disable optimization routine
+        "enabled": true
+    },
+    "search_space": [
+        // MiniBevelModel
+        {
+            // (int): Window Size along X axis where (X1, Y1) is searched.
+            "winSizeX": 16,
+            // (int): Window Size along Y axis where (X1, Y1) is searched.
+            "winSizeY": 16,
+            // (float): Minimum angle of inclination of bevel in radians
+            "minAlpha": -1,
+            // (float): Maximum angle of inclination of bevel in radians
+            "maxAlpha": 0.3,
+            // (float): Multiplier for finding minM
+            "minMMultiplier": 0.8,
+            // (float): Multiplier for finding maxM
+            "maxMMultiplier": 1.2,
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "referencePoints": {
+                "offset": 10,
+                "upThreshold": 0.3,
+                "loThreshold": 0.5,
+                "upThresholdRef": 0.1,
+                "loThresholdRef": 0.1
+            }
+        },
+        // TBevelModel
+        {
+            // (int): Window Size along X axis where (X1, Y1) is searched.
+            "winSizeX": 10,
+            // (int): Window Size along Y axis where (X1, Y1) is searched.
+            "winSizeY": 10,
+            // (float): Minimum angle of inclination of bevel in radians
+            "minAlpha": -1,
+            // (float): Maximum angle of inclination of bevel in radians
+            "maxAlpha": 0.3,
+            // (float): Multiplier for finding minM
+            "minMMultiplier": 0.8,
+            // (float): Multiplier for finding maxM
+            "maxMMultiplier": 1.2,
+            // (float): Multiplier for finding minB
+            "minBMultiplier": 0.8,
+            // (float): Multiplier for finding maxB
+            "maxBMultiplier": 1.4,
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "shrinkOffsetM": 0.100,
+            "shrinkOffsetB": 0.020,
+            "referencePoints": {
+                "offset": 10,
+                "upThreshold": 0.7,
+                "loThreshold": 0.7,
+                "upThresholdRef": 0.7,
+                "loThresholdRef": 0.7
+            }
+        },
+        // CustomBevelModel
+        {
+            // (int): Window Size along X axis where (X1, Y1) is searched.
+            "winSizeX": 10,
+            // (int): Window Size along Y axis where (X1, Y1) is searched.
+            "winSizeY": 10,
+            // (float): Minimum angle of inclination of bevel in radians
+            "minAlpha": -1.5,
+            // (float): Maximum angle of inclination of bevel in radians
+            "maxAlpha": 1.5,
+            // (float): Multiplier for finding minM
+            "minMMultiplier": 0.4,
+            // (float): Multiplier for finding maxM
+            "maxMMultiplier": 1.6,
+            // (float):
+            "minS": 0,
+            // (float):
+            "maxS": 50,
+            // (float):
+            "minE": 0,
+            // (float):
+            "maxE": 50,
+            // (Array of double):
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                10.0,
+                1.0,
+                1.0
+            ],
+            "referencePoints": {
+                "offset": 10,
+                "upThreshold": 0.7,
+                "loThreshold": 0.5,
+                "upThresholdRef": 0.7,
+                "loThresholdRef": 0.1667
+            }
+        },
+        // MiniBevelModelExt
+        {
+            // (int): Window Size along X axis where (X1, Y1) is searched.
+            "winSizeX": 16,
+            // (int): Window Size along Y axis where (X1, Y1) is searched.
+            "winSizeY": 16,
+            // (float): Minimum angle of inclination of bevel in radians
+            "minAlpha": -1,
+            // (float): Maximum angle of inclination of bevel in radians
+            "maxAlpha": 0.3,
+            // (float): Multiplier for finding minM
+            "minMMultiplier": 0.8,
+            // (float): Multiplier for finding maxM
+            "maxMMultiplier": 1.2,
+            // (float): beta +/- deltaBeta
+            "deltaBeta": 2,
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "referencePoints": {
+                "offset": 10,
+                "upThreshold": 0.3,
+                "loThreshold": 0.5,
+                "upThresholdRef": 0.1,
+                "loThresholdRef": 0.1
+            }
+        }
+    ],
+    "scheimpflug_transformation_calibration": {
+        // (int): Maximum number of PSO retries
+        "maxRetries": 3,
+        // (float): error on the Scheimpflug optimization based on grid
+        "epsilonGrid": 0.1, //1e-2,
+        // (float): error on the Scheimpflug optimization based on calibration tool
+        "epsilon": 1e-6,
+        // (boolean): permit the solution to be on the boundary of the search space
+        "permitBoundarySolutions": true,
+        "pso": {
+            // (bool): PSO debug variable
+            "debug": false,
+            // (int): Maximum number of iterations
+            "nIterations": 1000,
+            // (int): Number of particles
+            "nParticles": 1000, //100
+            // (float): Initial velocity
+            "w0i": 0.7,
+            // (float): Final velocity
+            "w0f": 0.7,
+            // (float): cognitive weight
+            "cp": 0.7,
+            // (float): social weight
+            "cg": 0.5
+        }
+    },
+    "scheimpflug_transformation_chart": {
+        "debug": false,
+        // (float): Difference of Gaussians - sigma1
+        "dog_sigma1": 3.0, //0.2,
+        // (float): Difference of Gaussians - sigma2 (< sigma1)
+        "dog_sigma2": 0.2, //3.0,
+        // (float): Threshold used for binarization (between 0 and 1)
+        "dog_threshold": 0.9, //0.6,
+        // (float): Threshold used in hough line transform (between 0 and 1)
+        "hough_threshold": 0.7, //0.45,//0.7,
+        // (int): Number of peaks required: sum of vertical and horizontal lines to be found
+        "hough_peaks": 14
+    },
+    "test": {
+        // (int): Number of repetitions of optimization for a single image
+        "repetitions": 100,
+        // (string): CSV/Image files output directory
+        "outputFolder": "results",
+        // (string): CSV file name with dataset statistics.
+        "statisticsFilename": "stats.csv",
+        // (bool): Flag indicating if the output image should be saved on disk.
+        "storeImages": true,
+        "thresholdB": 100,
+        "thresholdBWithRepetitions": 50,
+        "thresholdM": 200,
+        "thresholdMWithRepetitions": 100,
+        "comparativeTestInputFile": "../../tests/ImageProcessing.Tester/GridCoorT.csv",
+        "generetionSyntheticImagesInputFile": "../../tests/ImageProcessing.Tester/M801.csv",
+        "medianBlurFilter": false,
+        "lowPassFilter": true,
+        "processSyntheticImages": false
+    }
+}

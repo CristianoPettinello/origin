@@ -1,0 +1,214 @@
+{
+    "debug": true,
+    "image": {
+        "width": 400,
+        "height": 400,
+        "nChannels": 3
+    },
+    "channel_section": {
+        "selectedChannel": 1
+    },
+    "model": "MINI_BEVEL",
+    "thresholding": {
+        "enableStilusMask": true,
+        "leftBoundary": 100,
+        "lowerBoundary": 50,
+        "maxIterations": 255,
+        "profileOffset": 3,
+        "referenceHalfHeight": 20,
+        "referenceOffsetFromStilus": 60,
+        "referenceWidth": 10,
+        "rightBoundary": 100,
+        "searchOffset": 10,
+        "searchWidth": 20,
+        "stilusMaskX1": 212,
+        "stilusMaskX2": 399,
+        "stilusMaskY1": 180,
+        "stilusMaskY2": 250,
+        "threshold": 1,
+        "upperBoundary": 2
+    },
+    "profile_cleanup": {
+        "distanceThreshold": 5.0,
+        "windowSize": 3,
+        "counterThreshold": 5,
+        "filteringHalfWindowSize": 5
+    },
+    "pso": {
+        "debug": true,
+        "nIterations": 100,
+        "nParticles": 10000,
+        "enableConstraintAtIteration": 10,
+        "w0i": 0.5,
+        "w0f": 0.05,
+        "cp": 0.5,
+        "cg": 0.5
+    },
+    "optimization": {
+        "debug": true,
+        "lossFieldMargin": 1,
+        "lossFieldMarginCalibration": -2,
+        "lossFieldMarginValidation": -2,
+        "lossFieldRightOffset": 30,
+        "lossFieldLeftOffset": 30,
+        "maxRetries": 30,
+        "checkIntersections": true,
+        "checkIntersectionsCalibration": false,
+        "checkIntersectionsValidation": false,
+        "intersectionThreshold": 30,
+        "leftGradientWidth": 20,
+        "enabled": true
+    },
+    "search_space": [
+        {
+            "winSizeX": 10,
+            "winSizeY": 10,
+            "minAlpha": -1,
+            "maxAlpha": 0.3,
+            "minMMultiplier": 0.8,
+            "maxMMultiplier": 1.2,
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        {
+            "winSizeX": 10,
+            "winSizeY": 10,
+            "minAlpha": -1,
+            "maxAlpha": 0.3,
+            "minMMultiplier": 0.8,
+            "maxMMultiplier": 1.2,
+            "minBMultiplier": 0.8,
+            "maxBMultiplier": 1.4,
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "shrinkOffsetM": 0.100,
+            "shrinkOffsetB": 0.020
+        },
+        {
+            "winSizeX": 10,
+            "winSizeY": 10,
+            "minAlpha": -1.5,
+            "maxAlpha": 1.5,
+            "minMMultiplier": 0.4,
+            "maxMMultiplier": 1.6,
+            "minS": 0,
+            "maxS": 50,
+            "minE": 0,
+            "maxE": 50,
+            "weight": [
+                1.0,
+                1.0,
+                1.0,
+                10.0,
+                1.0,
+                1.0
+            ]
+        }
+    ],
+    "scheimpflug_transformation": {
+        "tt": 38.76,
+        "p1": 32.85,
+        "p2": 31.14,
+        "px": 0.003,
+        "hs": 0.6,
+        "hFoV": 2.5,
+        "pxFoV": 0.01,
+        "theta": -52.69,
+        "phi": 25.54,
+        "alpha": -18.105,
+        "beta": 4.08,
+        "magnification": 0.241,
+        "delta": 6.0,
+        "cx0": 187,
+        "cy0": 167,
+        "frame": ""
+    },
+    "scheimpflug_transformation_calibration": {
+        "maxRetries": 10,
+        "epsilon": 1e-06,
+        "pso": {
+            "nIterations": 1000,
+            "nParticles": 500
+        },
+        "frames": {
+            "LTT12-M801_3_KIT_1": {
+                "B": 0.998,
+                "M": 2.852,
+                "angle1": 55,
+                "angle2": 55,
+                "image": "Calibration/kit1/LTT12-M801_pos=R100_H=+14.7_deltaN=+00.0_LED=0005.png"
+            },
+            "LTT12-M804_3_KIT_1": {
+                "B": 1.052,
+                "M": 2.99,
+                "angle1": 55,
+                "angle2": 55,
+                "image": "Calibration/kit1/LTT12-M804_pos=R750_H=+07.0_deltaN=+00.0_LED=0010.png"
+            },
+            "LTT12-M806_3_KIT_1": {
+                "B": 0.99,
+                "M": 2.745,
+                "angle1": 54,
+                "angle2": 54,
+                "image": "Calibration/kit1/LTT12-M806_pos=L750_H=+07.0_deltaN=+00.0_LED=0005.png"
+            },
+            "LTT12-M807_3_KIT_1": {
+                "B": 0.985,
+                "M": 2.785,
+                "angle1": 54.5,
+                "angle2": 54.5,
+                "image": "Calibration/kit1/LTT12-M807_pos=L410_H=+07.0_deltaN=+00.0_LED=0005.png"
+            }
+        },
+        "current": "LTT12-M801_3_KIT_1",
+        "calibrated": false
+    },
+    "scheimpflug_transformation_chart": {
+        "tt": 38.76,
+        "p1": 32.85,
+        "p2": 31.14,
+        "px": 0.003,
+        "hs": 0.6,
+        "hFoV": 2.5,
+        "pxFoV": 0.01,
+        "theta": -52.69,
+        "phi": 25.54,
+        "alpha": -18.105,
+        "beta": 4.08,
+        "magnification": 0.241,
+        "delta": 6.0,
+        "cx0": 187,
+        "cy0": 167
+    },
+    "search_space_scheimpflug": {
+        "minTt": 38.7,
+        "maxTt": 39.6,
+        "minHFoV": 2.0,
+        "maxHFoV": 4.0,
+        "minTheta": -56.84,
+        "maxTheta": -50.84,
+        "minAlpha": -20.2,
+        "maxAlpha": -16.2,
+        "minBeta": 2.0,
+        "maxBeta": 5.5,
+        "minMagnification": 0.236,
+        "maxMagnification": 0.260,
+        "minDelta": 4.5,
+        "maxDelta": 6.5
+    },
+    "test": {
+        "repetitions": 1,
+        "outputFolder": "results",
+        "statisticsFilename": "stats.csv",
+        "storeImages": true
+    }
+}

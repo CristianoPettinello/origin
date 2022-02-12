@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="NidekLogo">NidekLogo.png</file>
+    </qresource>
+</RCC>

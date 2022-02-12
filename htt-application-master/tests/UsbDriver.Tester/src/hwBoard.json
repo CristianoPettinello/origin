@@ -1,0 +1,23 @@
+{
+    "board": {
+        "macro": {},
+        "pid": "0x00F1",
+        "streaming_endpoint": "0x83",
+        "vid": "0x04B4"
+    },
+    "debug": true,
+    "firmware": {
+        "filename": "firmware/htt_cam.img",
+        "pid": "0x00F3",
+        "vid": "0x04B4"
+    },
+    "led": {
+        "default_power": 5,
+        "Imax": 1.6,
+        "Pcw": 5,
+        "Platch": 20,
+        "Pnull": 50,
+        "Tlatch": 30,
+        "Tshot": 0
+    }
+}

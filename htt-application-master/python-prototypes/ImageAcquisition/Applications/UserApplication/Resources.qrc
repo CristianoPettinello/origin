@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>Icons/NIDEK.ico</file>
+    <file>Icons/Black-circle-small.png</file>
+    <file>Icons/Green-circle-small.png</file>
+  </qresource>
+</RCC>

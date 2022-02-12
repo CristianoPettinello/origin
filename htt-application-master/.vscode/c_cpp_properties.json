@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/applications/**",
+                "${workspaceFolder}/ext-dep/jsoncpp/build/include",
+                "${workspaceFolder}/libraries/UsbDriver/**",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.10240.0/ucrt",
+                "C:\\Qt\\Qt5.9.3\\5.9.3\\mingw53_32\\include",
+                "C:\\Qt\\Qt5.9.3\\5.9.3\\mingw53_32\\include\\QtCore",
+                "C:\\Qt\\Qt5.9.3\\5.9.3\\mingw53_32\\include\\QtGui",
+                "C:\\Qt\\Qt5.9.3\\5.9.3\\mingw53_32\\include\\QtWidgets",
+                "C:\\Qt\\Qt5.9.3\\5.9.3\\mingw53_32\\include\\QtCharts"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "8.1",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}

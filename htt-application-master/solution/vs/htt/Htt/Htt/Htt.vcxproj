@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F55E047C-8A53-469F-A051-AE2CF317183F}</ProjectGuid>
+    <RootNamespace>Htt</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\dev\issue6614\libraries\ImageProcessing\include;E:\dev\issue6614\ext-dep\jsoncpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..\..\libraries\ImageProcessing\include;$(SolutionDir)..\..\..\..\ext-dep\jsoncpp\include;$(SolutionDir)..\..\..\..\libraries\ImageProcessing\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..\..\libraries\ImageProcessing\include;$(SolutionDir)..\..\..\..\ext-dep\jsoncpp\include;$(SolutionDir)..\..\..\..\libraries\ImageProcessing\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Htt.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Image.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\ImagePreprocessing.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\JsonUtils.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\lodepng.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Log.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Profile.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Settings.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Statistics.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\include\Utils.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\CustomBevelModel.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\MiniBevelModel.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\Model.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\ModelType.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\OptimizationEngine.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\Pso.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\ScheimpflugTransform.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\TBevelModel.h" />
+    <ClInclude Include="..\..\..\..\..\libraries\ImageProcessing\src\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\CustomBevelModel.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Htt.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Image.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\ImagePreprocessing.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Log.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\MiniBevelModel.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Model.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\OptimizationEngine.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Profile.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Pso.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\ScheimpflugTransform.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Settings.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Statistics.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\TBevelModel.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Timer.cpp" />
+    <ClCompile Include="..\..\..\..\..\libraries\ImageProcessing\src\Utils.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Htt", "Htt\Htt.vcxproj", "{F55E047C-8A53-469F-A051-AE2CF317183F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B} = {3AFF0635-71DA-49A0-80EA-26C55A3EA02B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jsoncpp", "..\..\jsoncpp\jsoncpp\jsoncpp.vcxproj", "{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pyHtt", "..\..\pyHtt\pyHtt\pyHtt.vcxproj", "{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B} = {3AFF0635-71DA-49A0-80EA-26C55A3EA02B}
+		{F55E047C-8A53-469F-A051-AE2CF317183F} = {F55E047C-8A53-469F-A051-AE2CF317183F}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Debug|x64.ActiveCfg = Debug|x64
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Debug|x64.Build.0 = Debug|x64
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Debug|x86.ActiveCfg = Debug|Win32
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Debug|x86.Build.0 = Debug|Win32
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Release|x64.ActiveCfg = Release|x64
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Release|x64.Build.0 = Release|x64
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Release|x86.ActiveCfg = Release|Win32
+		{F55E047C-8A53-469F-A051-AE2CF317183F}.Release|x86.Build.0 = Release|Win32
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Debug|x64.ActiveCfg = Debug|x64
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Debug|x64.Build.0 = Debug|x64
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Debug|x86.ActiveCfg = Debug|Win32
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Debug|x86.Build.0 = Debug|Win32
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Release|x64.ActiveCfg = Release|x64
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Release|x64.Build.0 = Release|x64
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Release|x86.ActiveCfg = Release|Win32
+		{3AFF0635-71DA-49A0-80EA-26C55A3EA02B}.Release|x86.Build.0 = Release|Win32
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Debug|x64.ActiveCfg = Debug|x64
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Debug|x64.Build.0 = Debug|x64
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Debug|x86.ActiveCfg = Debug|Win32
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Debug|x86.Build.0 = Debug|Win32
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Release|x64.ActiveCfg = Release|x64
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Release|x64.Build.0 = Release|x64
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Release|x86.ActiveCfg = Release|Win32
+		{2EBD4B18-B277-4DA7-8C78-9B92D668DA00}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

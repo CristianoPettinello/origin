@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/wizard">
+        <file alias="httLightFlux.csv">resources/htt_light_output_flux.csv</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="NidekLogo">resources/NidekLogo.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="grid">resources/kit1/grid.png</file>
+        <file alias="frame801">resources/kit1/LTT12-M801_pos=R100_H=+14.7_deltaN=+00.0_LED=0005.png</file>
+        <file alias="miniBevel">resources/images/LTT12-M801_pos=R100_H=+14.7_deltaN=+00.0_LED=0005.png</file>
+        <file alias="customBevel">resources/images/LTT12-M808_pos=L750_H=+10.0_deltaN=+00.0_LED=0010.png</file>
+        <file alias="TBevel">resources/images/Frame09_pos=R110_H=+07.0_deRtaN=+00.0_LED=0050.png</file>
+    </qresource>
+</RCC>

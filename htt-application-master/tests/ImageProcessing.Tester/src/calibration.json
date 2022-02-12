@@ -1,0 +1,168 @@
+{
+    "htt": {
+        "H": {
+            "max": 20,
+            "min": 0
+        },
+        "deltaN": {
+            "max": 20,
+            "min": -20
+        }
+    },
+    "nominal_range_scheimpflug_transformation": {
+        "alpha": {
+            "max": -17.72,
+            "min": -21.28
+        },
+        "beta": {
+            "max": 7.78,
+            "min": 4.22
+        },
+        "cx0": {
+            "max": 293.7,
+            "min": 266.3
+        },
+        "cy0": {
+            "max": 294.3,
+            "min": 265.7
+        },
+        "delta": {
+            "max": 3.18,
+            "min": -3.18
+        },
+        "p1": {
+            "max": 30.12,
+            "min": 29.12
+        },
+        "p2": {
+            "max": 28.5,
+            "min": 27.22
+        },
+        "phi": {
+            "max": 25.73,
+            "min": 24.27
+        },
+        "theta": {
+            "max": -53.87,
+            "min": -56.13
+        },
+        "tt": {
+            "max": 35.26,
+            "min": 34.24
+        }
+    },
+    "nominal_scheimpflug_transformation": {
+        "alpha": -19.5,
+        "beta": 6,
+        "cx0": 280,
+        "cy0": 280,
+        "delta": 0,
+        "magnification": 0.233579,
+        "p1": 29.62,
+        "p2": 27.86,
+        "phi": 25,
+        "px": 0.0022,
+        "theta": -55.0,
+        "tt": 34.75
+    },
+    "scheimpflug_transformation": {
+        "alpha": -19.5,
+        "beta": 6,
+        "cx0": 280,
+        "cy0": 280,
+        "delta": 0,
+        "magnification": 0.233579,
+        "p1": 29.62,
+        "p2": 27.86,
+        "phi": 25,
+        "px": 0.0022,
+        "theta": -55.0,
+        "tt": 34.75
+    },
+    "scheimpflug_transformation_calibration": {
+        "current": "LTT12-M804_3_KIT_1",
+        "frames": {
+            "LTT12-M801_3_KIT_1": {
+                "B": 0.987,
+                "M": 2.82,
+                "angle1": 55,
+                "angle2": 55,
+                // "image": "../../calibration/FM2-kit1/FM2001/M801_pos=R250_H=+11.0_deltaN=+00.0_LED=100_Exp=033_G=001_ts=20210520-120703-124.png"
+                "image": "../../calibration/FM2-kit1/FM2002/M801_pos=R250_H=+11.0_deltaN=+00.0_LED=100_Exp=033_G=001_ts=20210511-133537-531.png"
+            },
+            "LTT12-M804_3_KIT_1": {
+                "B": 1.029,
+                "M": 2.94,
+                "angle1": 55,
+                "angle2": 55,
+                // "image": "../../calibration/FM2-kit1/FM2001/M804_pos=R250_H=+11.0_deltaN=+00.0_LED=100_Exp=033_G=001_ts=20210520-123811-991.png"
+                "image": "../../calibration/FM2-kit1/FM2002/M804_pos=R250_H=+11.0_deltaN=+00.0_LED=100_Exp=033_G=001_ts=20210511-140902-646.png"
+            },
+            "LTT12-M806_3_KIT_1": {
+                "Bm": 0.986,
+                "B": 0.98,
+                "M": 2.75,
+                "angle1": 54,
+                "angle2": 54,
+                "image": "../../calibration/FM2-kit1/M806_pos=R250_H=+11.0_deltaN=+00.0_LED=100_Exp=033_G=002_ts=20210511-163918-842.png"
+            },
+            "LTT12-M807_3_KIT_1": {
+                "Bm": 0.981,
+                "B": 0.98,
+                "M": 2.8,
+                "angle1": 54.5,
+                "angle2": 54.5,
+                "image": "../../calibration/FM2-kit1/M807_pos=R250_H=+11.0_deltaN=+00.0_LED=100_Exp=033_G=002_ts=20210511-165710-122.png"
+            }
+        },
+        "grid": {
+            "H": 0.0,
+            "deltaN": 0.0,
+            "image": "../../calibration/grids_fm2/FM2001_grid1_tool1_20210329.png",
+            "lambda": 0
+        },
+        "multiFramesFolder": "../../calibration/FM2-multiframes/"
+    },
+    "search_space_scheimpflug": {
+        "alpha": {
+            "max": -17.72,
+            "min": -21.28
+        },
+        "beta": {
+            "max": 7.78,
+            "min": 4.22
+        },
+        "cx0": {
+            "max": 293.7,
+            "min": 266.3
+        },
+        "cy0": {
+            "max": 294.3,
+            "min": 265.7
+        },
+        "delta": {
+            "max": 3.18,
+            "min": -3.18
+        },
+        "p1": {
+            "max": 30.12,
+            "min": 29.12
+        },
+        "p2": {
+            "max": 28.5,
+            "min": 27.22
+        },
+        "phi": {
+            "max": 25.73,
+            "min": 24.27
+        },
+        "theta": {
+            "max": -53.87,
+            "min": -56.13
+        },
+        "tt": {
+            "max": 35.26,
+            "min": 34.24
+        }
+    }
+}
